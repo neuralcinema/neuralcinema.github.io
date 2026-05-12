@@ -1,0 +1,1 @@
+Neural Cinematographer: World-Space Authoring of Camera and Object Motion from a Single Image .
