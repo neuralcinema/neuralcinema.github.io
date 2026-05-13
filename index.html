@@ -69,6 +69,91 @@
       display: block;
     }
 
+    .teaser-toggle {
+      display: inline-flex;
+      gap: 0.5em;
+      margin-bottom: 0.9em;
+    }
+
+    .teaser-frame-panel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75em;
+      min-height: 92px;
+      margin: 0 auto 1rem;
+      padding: 0.75em 1em;
+      border: 1px solid #d7dde8;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .teaser-frame-thumb {
+      width: 96px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 2px solid #1f77d4;
+      box-shadow: 0 0 0 2px rgba(31, 119, 212, 0.14);
+      background: #fff;
+    }
+
+    .teaser-toggle button {
+      min-width: 96px;
+      padding: 0.38em 1.2em;
+      border: 1px solid #c8c8c8;
+      border-radius: 4px;
+      background: #fff;
+      color: #111;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.9em;
+    }
+
+    .teaser-toggle button.active {
+      border-color: #70b700;
+      background: #70b700;
+      color: #fff;
+    }
+
+    .teaser-motion-set {
+      display: none;
+    }
+
+    .teaser-motion-set.active {
+      display: block;
+    }
+
+    .teaser-motion-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5em;
+    }
+
+    .teaser-motion-item {
+      text-align: center;
+    }
+
+    .teaser-motion-label {
+      padding: 0.5em 0.3em;
+      border-bottom: 2px solid #70b700;
+      background: #eef3fb;
+      color: #174a90;
+      font-size: 0.9em;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .teaser-motion-item video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: #fff;
+      box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.12);
+      display: block;
+    }
+
     .sample-prompt,
     .comparison-prompt {
       flex: 0 0 100%;
@@ -168,6 +253,10 @@
         max-width: 100%;
       }
 
+      .teaser-motion-grid {
+        grid-template-columns: 1fr;
+      }
+
       .mobile-tabs {
         display: flex;
         flex-wrap: wrap;
@@ -223,6 +312,48 @@
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">Anonymous Authors</span>
+          </div>
+          <div style="margin-top: 2rem;">
+            <p class="media-label">Input Image</p>
+            <div class="teaser-frame-panel">
+              <img class="teaser-frame-thumb" src="./new_assets/teaser_vid/first_frame_img.png" alt="First frame">
+            </div>
+            <div class="teaser-toggle" aria-label="Teaser video mode">
+              <button class="active" type="button" data-teaser-mode="overlay">Camera Control</button>
+              <button type="button" data-teaser-mode="generated">Camera + Object Control</button>
+            </div>
+            <div class="teaser-motion-set active" data-teaser-panel="overlay">
+              <div class="teaser-motion-grid">
+                <div class="teaser-motion-item">
+                  <div class="teaser-motion-label">Sample 1</div>
+                  <video autoplay muted loop playsinline><source src="./new_assets/teaser_vid/cam_control1.mp4" type="video/mp4"></video>
+                </div>
+                <div class="teaser-motion-item">
+                  <div class="teaser-motion-label">Sample 2</div>
+                  <video autoplay muted loop playsinline><source src="./new_assets/teaser_vid/cam_control2.mp4" type="video/mp4"></video>
+                </div>
+                <div class="teaser-motion-item">
+                  <div class="teaser-motion-label">Sample 3</div>
+                  <video autoplay muted loop playsinline><source src="./new_assets/teaser_vid/cam_control3.mp4" type="video/mp4"></video>
+                </div>
+              </div>
+            </div>
+            <div class="teaser-motion-set" data-teaser-panel="generated">
+              <div class="teaser-motion-grid">
+                <div class="teaser-motion-item">
+                  <div class="teaser-motion-label">Sample 1</div>
+                  <video autoplay muted loop playsinline><source src="./new_assets/teaser_vid/cam+object_control1.mp4" type="video/mp4"></video>
+                </div>
+                <div class="teaser-motion-item">
+                  <div class="teaser-motion-label">Sample 2</div>
+                  <video autoplay muted loop playsinline><source src="./new_assets/teaser_vid/cam+object_control2.mp4" type="video/mp4"></video>
+                </div>
+                <div class="teaser-motion-item">
+                  <div class="teaser-motion-label">Sample 3</div>
+                  <video autoplay muted loop playsinline><source src="./new_assets/teaser_vid/cam+object_control3.mp4" type="video/mp4"></video>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -427,6 +558,26 @@
 </button>
 
 <script>
+  document.querySelectorAll('[data-teaser-mode]').forEach(function(button) {
+    button.addEventListener('click', function() {
+      var mode = this.dataset.teaserMode;
+      document.querySelectorAll('[data-teaser-mode]').forEach(function(btn) {
+        btn.classList.remove('active');
+      });
+      this.classList.add('active');
+      document.querySelectorAll('[data-teaser-panel]').forEach(function(panel) {
+        panel.classList.remove('active');
+        panel.querySelectorAll('video').forEach(function(video) { video.pause(); });
+      });
+      var activePanel = document.querySelector('[data-teaser-panel="' + mode + '"]');
+      activePanel.classList.add('active');
+      activePanel.querySelectorAll('video').forEach(function(video) {
+        video.currentTime = 0;
+        video.play();
+      });
+    });
+  });
+
   document.querySelectorAll('.mobile-tab').forEach(function(tab) {
     tab.addEventListener('click', function() {
       var caseId = this.dataset.case;
