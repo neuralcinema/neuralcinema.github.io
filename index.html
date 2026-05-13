@@ -260,7 +260,7 @@
          ======================================================================= -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">4D Reconstruction Visualization</h2>
+        <h2 class="title is-3">Qualitative Results</h2>
         <!-- Two-column container styles -->
         <style>
           .visualization-row {
@@ -292,9 +292,11 @@
           .visualization-row .sample-prompt {
             flex: 0 0 100%;
             max-width: 940px;
-            margin: 0 auto;
-            text-align: left;
-            font-size: 0.95em;
+            margin: 0.5em auto 0;
+            padding: 0.35em 1em 0;
+            text-align: center;
+            font-size: 1.15em;
+            line-height: 1.45;
           }
           @media (max-width: 768px) {
             .visualization-row {
@@ -308,7 +310,7 @@
               font-size: 0.8em;
             }
             .visualization-row .sample-prompt {
-              font-size: 0.85em;
+              font-size: 1em;
             }
           }
         </style>
@@ -415,6 +417,209 @@
   </div>
 </section>
 
+
+<!-- ==================== Quantitative Results ====================
+     Method comparison videos
+     ============================================================== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comparison Results</h2>
+
+        <style>
+          .comparison-container {
+            width: 100%;
+            overflow-x: auto;
+          }
+          .comparison-header {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 0.35em;
+            margin-bottom: 0.6em;
+          }
+          .comparison-header .method-name {
+            flex: 1 1 0;
+            max-width: 260px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.95em;
+          }
+          .comparison-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.35em;
+            margin-bottom: 1.25em;
+          }
+          .comparison-row .comp-video {
+            flex: 1 1 0;
+            max-width: 260px;
+            text-align: center;
+          }
+          .comparison-row .comp-video img,
+          .comparison-row .comp-video video {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 0.3em;
+            box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
+          }
+          .comp-video .video-label {
+            display: none;
+            font-size: 0.78em;
+            font-weight: 700;
+            margin-bottom: 0.25em;
+            color: #363636;
+          }
+          .comp-video .video-label.label-ours {
+            color: #1f77b4;
+          }
+          .comparison-row .comparison-prompt {
+            flex: 0 0 100%;
+            max-width: 1080px;
+            margin: 0.5em auto 0;
+            padding: 0.35em 1em 0;
+            text-align: center;
+            font-size: 1.15em;
+            line-height: 1.45;
+          }
+          .mobile-tabs {
+            display: none;
+          }
+
+          @media screen and (max-width: 768px) {
+            .comparison-header {
+              display: none;
+            }
+            .mobile-tabs {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 0.4em;
+              margin-bottom: 1em;
+            }
+            .mobile-tab {
+              padding: 0.4em 0.8em;
+              border: 2px solid #ddd;
+              border-radius: 0.5em;
+              cursor: pointer;
+              font-size: 0.8em;
+              background: white;
+              transition: all 0.2s;
+            }
+            .mobile-tab.active {
+              background: #13294B;
+              color: white;
+              border-color: #13294B;
+            }
+            .comparison-row {
+              display: none;
+              flex-wrap: wrap;
+              gap: 0.5em;
+            }
+            .comparison-row.mobile-active {
+              display: flex;
+            }
+            .comparison-row .comp-video {
+              flex: 0 0 calc(50% - 0.5em);
+              max-width: calc(50% - 0.5em);
+            }
+            .comp-video .video-label {
+              display: block;
+            }
+            .comparison-row .comparison-prompt {
+              font-size: 1em;
+            }
+          }
+
+          @media screen and (max-width: 480px) {
+            .comparison-row .comp-video {
+              flex: 0 0 calc(50% - 0.5em);
+              max-width: calc(50% - 0.5em);
+            }
+          }
+        </style>
+
+        <div class="comparison-container">
+          <div class="mobile-tabs">
+            <span class="mobile-tab active" data-case="0">Bear</span>
+            <span class="mobile-tab" data-case="1">Camel</span>
+            <span class="mobile-tab" data-case="2">Dog</span>
+            <span class="mobile-tab" data-case="3">Hike</span>
+            <span class="mobile-tab" data-case="4">Skate Park</span>
+          </div>
+
+          <div class="comparison-header">
+            <div class="method-name">Input Image</div>
+            <div class="method-name">ATI</div>
+            <div class="method-name">WanMove</div>
+            <div class="method-name" style="color: #1f77b4;">Ours</div>
+          </div>
+
+          <div class="comparison-row mobile-active" data-case="0">
+            <div class="comp-video"><span class="video-label">Input Image</span><img src="./new_assets/all_qual_results/thumbnails/bear__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Bear input image"></div>
+            <div class="comp-video"><span class="video-label">ATI</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/bear.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><span class="video-label">WanMove</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/bear.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><span class="video-label label-ours">Ours</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/bear.mp4" type="video/mp4"></video></div>
+            <p class="comparison-prompt"><strong>Prompt:</strong> ""</p>
+          </div>
+
+          <div class="comparison-row" data-case="1">
+            <div class="comp-video"><span class="video-label">Input Image</span><img src="./new_assets/all_qual_results/thumbnails/camel__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Camel input image"></div>
+            <div class="comp-video"><span class="video-label">ATI</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/camel.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><span class="video-label">WanMove</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/camel.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><span class="video-label label-ours">Ours</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/camel.mp4" type="video/mp4"></video></div>
+            <p class="comparison-prompt"><strong>Prompt:</strong> ""</p>
+          </div>
+
+          <div class="comparison-row" data-case="2">
+            <div class="comp-video"><span class="video-label">Input Image</span><img src="./new_assets/all_qual_results/thumbnails/dog__variant_000__bg_bmx-trees_orbit_pos_x.mp4.png" alt="Dog input image"></div>
+            <div class="comp-video"><span class="video-label">ATI</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/dog.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><span class="video-label">WanMove</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/dog.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><span class="video-label label-ours">Ours</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/dog.mp4" type="video/mp4"></video></div>
+            <p class="comparison-prompt"><strong>Prompt:</strong> ""</p>
+          </div>
+
+          <div class="comparison-row" data-case="3">
+            <div class="comp-video"><span class="video-label">Input Image</span><img src="./new_assets/all_qual_results/thumbnails/hike__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Hike input image"></div>
+            <div class="comp-video"><span class="video-label">ATI</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/hike.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><span class="video-label">WanMove</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/hike.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><span class="video-label label-ours">Ours</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/hike.mp4" type="video/mp4"></video></div>
+            <p class="comparison-prompt"><strong>Prompt:</strong> ""</p>
+          </div>
+
+          <div class="comparison-row" data-case="4">
+            <div class="comp-video"><span class="video-label">Input Image</span><img src="./new_assets/all_qual_results/thumbnails/skate-park__variant_000__bg_bmx-trees_orbit_pos_x.mp4.png" alt="Skate park input image"></div>
+            <div class="comp-video"><span class="video-label">ATI</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/skate-park.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><span class="video-label">WanMove</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/skate-park.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><span class="video-label label-ours">Ours</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/skate-park.mp4" type="video/mp4"></video></div>
+            <p class="comparison-prompt"><strong>Prompt:</strong> ""</p>
+          </div>
+        </div>
+
+        <script>
+          document.querySelectorAll('.mobile-tab').forEach(function(tab) {
+            tab.addEventListener('click', function() {
+              var caseId = this.dataset.case;
+              document.querySelectorAll('.mobile-tab').forEach(function(t) { t.classList.remove('active'); });
+              this.classList.add('active');
+              document.querySelectorAll('.comparison-row').forEach(function(row) {
+                row.classList.remove('mobile-active');
+                row.querySelectorAll('video').forEach(function(v) { v.pause(); });
+              });
+              var activeRow = document.querySelector('.comparison-row[data-case="' + caseId + '"]');
+              activeRow.classList.add('mobile-active');
+              activeRow.querySelectorAll('video').forEach(function(v) { v.currentTime = 0; v.play(); });
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ==================== Part 11: Footer ====================
      Footer and copyright notice
