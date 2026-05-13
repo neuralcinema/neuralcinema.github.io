@@ -1,550 +1,347 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Neural Cinematographer: World-Space Authoring of Camera and Object
-        Motion from a Single Image.">
+  <meta name="description" content="Neural Cinematographer: World-Space Authoring of Camera and Object Motion from a Single Image.">
   <meta name="keywords" content="Neural Cinematographer, Camera Motion, Object Motion, Single Image, World-Space Authoring">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Neural Cinematographer: World-Space Authoring of Camera and Object
-        Motion from a Single Image</title>
+  <title>Neural Cinematographer: World-Space Authoring of Camera and Object Motion from a Single Image</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./assets/icon.png">
+
   <style>
     body, html, .title, .subtitle, .content, .button, p, h1, h2, h3, h4, h5, h6, span, a, li {
       font-family: 'Source Sans 3', sans-serif !important;
     }
-  </style>
-
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./assets/neural-cinematographer.png">
-
-  <style>
-    /* ============================================================
-       Anonymous project page visual styles
-       ============================================================ */
 
     html { scroll-behavior: smooth; }
 
-    /* ----- Hero ----- */
     section.hero {
       background: linear-gradient(150deg, #ffffff 0%, #edf1f8 55%, #e4ecf7 100%);
       border-bottom: 1px solid #c8d5e8;
     }
 
-    .publication-title img {
-      filter: drop-shadow(0 6px 18px rgba(19, 41, 75, 0.18));
-    }
-
-    /* Conference badge */
-    .publication-title .subtitle.is-5 em {
-      background: linear-gradient(135deg, #13294B 0%, #1e3a66 100%);
-      color: white;
-      padding: 0.28em 0.95em;
-      border-radius: 2em;
-      font-style: normal;
-      font-weight: 700;
-      box-shadow: 0 4px 16px rgba(19, 41, 75, 0.35);
-      letter-spacing: 0.04em;
-      display: inline-block;
-    }
-
-    /* Author links */
-    .publication-authors .author-block a {
-      color: #333;
-      font-weight: 600;
-      text-decoration: none;
-      border-bottom: 1.5px solid transparent;
-      transition: color 0.18s, border-color 0.18s;
-    }
-    .publication-authors .author-block a:hover {
-      color: #13294B;
-      border-color: #13294B;
-    }
-
-    /* ----- Publication buttons ----- */
-    .publication-links .button.is-dark {
-      background-color: #13294B !important;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
-      box-shadow: 0 2px 8px rgba(19, 41, 75, 0.25);
-    }
-    .publication-links .button.is-dark:hover {
-      background-color: #1e3a66 !important;
-      transform: translateY(-2px);
-      box-shadow: 0 7px 20px rgba(19, 41, 75, 0.35);
-    }
-
-    /* ----- Alternating section backgrounds ----- */
     section.section:nth-of-type(2n) {
       background-color: #f5f7fb;
     }
 
-    /* Section headings */
     .title.is-3 {
       margin-bottom: 1.8rem !important;
-      letter-spacing: -0.01em;
       color: #13294B !important;
     }
 
-    /* ----- 4D visualization media ----- */
-    .visualization-row .visualization-item img,
-    .visualization-row .visualization-item video {
-      box-shadow: 0 8px 28px rgba(0,0,0,0.13) !important;
-      transition: box-shadow 0.22s ease, transform 0.22s ease;
-    }
-    .visualization-row .visualization-item img:hover,
-    .visualization-row .visualization-item video:hover {
-      box-shadow: 0 14px 38px rgba(19, 41, 75, 0.20) !important;
-      transform: translateY(-2px);
+    .media-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1em;
+      margin: 1.25em 0;
     }
 
-    /* ----- Footer ----- */
+    .media-item {
+      flex: 1 1 360px;
+      max-width: 460px;
+      text-align: center;
+    }
+
+    .media-label {
+      display: block;
+      font-size: 1em;
+      font-weight: 700;
+      margin-bottom: 0.4em;
+      color: #363636;
+    }
+
+    .media-item img,
+    .media-item video,
+    .comp-video img,
+    .comp-video video {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 0.5em;
+      box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.15);
+      display: block;
+    }
+
+    .sample-prompt,
+    .comparison-prompt {
+      flex: 0 0 100%;
+      max-width: 1080px;
+      margin: 0.5em auto 0;
+      padding: 0.35em 1em 0;
+      text-align: center;
+      font-size: 1.15em;
+      line-height: 1.45;
+    }
+
+    .comparison-container {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .comparison-header,
+    .comparison-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.35em;
+    }
+
+    .comparison-header {
+      margin-bottom: 0.6em;
+    }
+
+    .comparison-row {
+      margin-bottom: 1.25em;
+    }
+
+    .method-name,
+    .comp-video {
+      flex: 1 1 0;
+      max-width: 210px;
+      text-align: center;
+    }
+
+    .method-name {
+      font-weight: 700;
+      font-size: 0.95em;
+    }
+
+    .label-groundtruth {
+      color: #f28c28;
+    }
+
+    .label-ours {
+      color: #1f77b4;
+    }
+
+    .mobile-tabs {
+      display: none;
+    }
+
     footer.footer {
       background: #ffffff;
       border-top: none;
     }
-    footer.footer p, footer.footer a {
+
+    footer.footer p {
       color: #13294B !important;
     }
-    footer.footer a:hover {
-      color: #1e3a66 !important;
+
+    #back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 44px;
+      height: 44px;
+      background: #13294B;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(19, 41, 75, 0.35);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.25s ease, transform 0.25s ease, background-color 0.2s ease;
+      z-index: 999;
+      pointer-events: none;
     }
 
-  </style>
+    #back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+    @media screen and (max-width: 768px) {
+      .media-item {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+
+      .mobile-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4em;
+        margin-bottom: 1em;
+      }
+
+      .mobile-tab {
+        padding: 0.4em 0.8em;
+        border: 2px solid #ddd;
+        border-radius: 0.5em;
+        cursor: pointer;
+        font-size: 0.8em;
+        background: white;
+        transition: all 0.2s;
+      }
+
+      .mobile-tab.active {
+        background: #13294B;
+        color: white;
+        border-color: #13294B;
+      }
+
+      .comparison-row {
+        display: none;
+      }
+
+      .comparison-row.mobile-active {
+        display: flex;
+      }
+
+      .comp-video {
+        flex: 0 0 calc(50% - 0.5em);
+        max-width: calc(50% - 0.5em);
+      }
+
+      .sample-prompt,
+      .comparison-prompt {
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<!-- ==================== Part 2 (anonymous version): Hero Section ====================
-     Simplified version used during anonymous review.
-     Delete this and restore the full version above after acceptance.
-     =================================================================================== -->
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <!-- Paper title -->
           <div class="publication-title">
             <h2 class="title is-3" style="font-weight: 500; margin-bottom: 0.3em; font-size: 2.2rem;">Neural Cinematographer: World-Space Authoring of Camera and Object Motion from a Single Image</h2>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">Anonymous Authors</span>
           </div>
-
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== Part 4: Video Carousel ====================
-     Uses the Bulma Carousel component to display multiple result videos
-     - results-carousel: carousel container
-     - each item contains one autoplay video
-     - swipe left/right to browse results
-     ==================================================================== -->
-<!--
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
--->
-
-
-<!-- ==================== Part 5: Abstract ====================
-     Paper abstract, centered layout
-     - is-four-fifths: 4/5 page width
-     - has-text-justified: justified text alignment
-     ==================================================================== -->
-<!--
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Camera redirection aims to replay a dynamic scene from a single monocular video under a user-specified camera trajectory. However, large-angle redirection is inherently ill-posed: a monocular video captures only a narrow spatio-temporal view of a dynamic 3D scene, providing highly partial observations of the underlying 4D world. The key challenge is therefore to recover a complete and coherent plenoptic representation from this limited input, with consistent geometry and coherent motion.
-          </p>
-          <p>
-            While recent diffusion-based methods achieve impressive visual generation quality, they often break down under large-angle viewpoint changes far from the original trajectory, where missing visual grounding leads to severe geometric ambiguity and temporal inconsistency.
-          </p>
-          <p>
-            To address this, we present <b>Neural Cinematographer</b>, a framework for world-space authoring of camera and object motion from a single image.
-          </p>
-          <p>
-            By aligning the canonical foreground point cloud to the global scene space via dense pixel-synchronized 3D–3D correspondences and projecting the geometry-complete 4D proxy onto target camera viewpoints, we provide geometric scaffolds (e.g., depth/visibility cues) that guide a conditional video diffusion model.
-          </p>
-          <p>
-            Extensive experiments show that Neural Cinematographer produces faithful and temporally coherent authored motion under challenging trajectories.
-          </p>
+      <div class="column is-full-width">
+        <h2 class="title is-3">Teaser Image</h2>
+        <div style="max-width: 1800px; margin: 0 auto;">
+          <img src="./new_assets/pdf_renders/teaser_v2.pdf.png" alt="Teaser image" style="width: 100%; height: auto; display: block; background: #fff;">
         </div>
       </div>
     </div>
   </div>
 </section>
--->
 
 <section class="section">
   <div class="container is-max-desktop">
-
-    <!-- ==================== 4D Reconstruction Visualization ====================
-         Two-column layout: input image | output video
-         ======================================================================= -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Qualitative Results</h2>
-        <!-- Two-column container styles -->
-        <style>
-          .visualization-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 1em;
-            margin: 1.25em 0;
-          }
-          .visualization-row .visualization-item {
-            flex: 1 1 360px;
-            max-width: 460px;
-            text-align: center;
-          }
-          .visualization-row .visualization-item img,
-          .visualization-row .visualization-item video {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background-color: white;
-            border-radius: 0.5em;
-            box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);
-            display: block;
-          }
-          .visualization-row .visualization-item p {
-            margin-top: 0.5em;
-          }
-          .visualization-row .sample-prompt {
-            flex: 0 0 100%;
-            max-width: 940px;
-            margin: 0.5em auto 0;
-            padding: 0.35em 1em 0;
-            text-align: center;
-            font-size: 1.15em;
-            line-height: 1.45;
-          }
-          @media (max-width: 768px) {
-            .visualization-row {
-              gap: 0.8em;
-            }
-            .visualization-row .visualization-item {
-              flex-basis: 100%;
-              max-width: 100%;
-            }
-            .visualization-row .visualization-item p {
-              font-size: 0.8em;
-            }
-            .visualization-row .sample-prompt {
-              font-size: 1em;
-            }
-          }
-        </style>
-        <div class="visualization-row">
-          <div class="visualization-item">
+
+        <div class="media-grid">
+          <div class="media-item">
+            <p class="media-label">Input Image</p>
             <img src="./new_assets/all_qual_results/thumbnails/bear__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Input image">
-            <p class="is-size-7">Input Image</p>
           </div>
-          <div class="visualization-item">
-            <video autoplay muted loop playsinline>
-              <source src="./new_assets/all_qual_results/bear__variant_000__bg_bmx-trees_orbit_neg_x.mp4" type="video/mp4">
-            </video>
-            <p class="is-size-7">Output Video</p>
+          <div class="media-item">
+            <p class="media-label">Output Video</p>
+            <video autoplay muted loop playsinline><source src="./new_assets/all_qual_results/bear__variant_000__bg_bmx-trees_orbit_neg_x.mp4" type="video/mp4"></video>
           </div>
-          <p class="sample-prompt"><strong>Prompt:</strong> ""</p>
+          <!-- <p class="sample-prompt"><strong>Prompt:</strong> ""</p> -->
         </div>
 
-        <div class="visualization-row">
-          <div class="visualization-item">
+        <div class="media-grid">
+          <div class="media-item">
+            <p class="media-label">Input Image</p>
             <img src="./new_assets/all_qual_results/thumbnails/bear__variant_000__bg_bmx-trees_orbit_pos_x_1.mp4.png" alt="Input image">
-            <p class="is-size-7">Input Image</p>
           </div>
-          <div class="visualization-item">
-            <video autoplay muted loop playsinline>
-              <source src="./new_assets/all_qual_results/bear__variant_000__bg_bmx-trees_orbit_pos_x_1.mp4" type="video/mp4">
-            </video>
-            <p class="is-size-7">Output Video</p>
+          <div class="media-item">
+            <p class="media-label">Output Video</p>
+            <video autoplay muted loop playsinline><source src="./new_assets/all_qual_results/bear__variant_000__bg_bmx-trees_orbit_pos_x_1.mp4" type="video/mp4"></video>
           </div>
-          <p class="sample-prompt"><strong>Prompt:</strong> ""</p>
+          <!-- <p class="sample-prompt"><strong>Prompt:</strong> ""</p> -->
         </div>
 
-        <div class="visualization-row">
-          <div class="visualization-item">
+        <div class="media-grid">
+          <div class="media-item">
+            <p class="media-label">Input Image</p>
             <img src="./new_assets/all_qual_results/thumbnails/camel__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Input image">
-            <p class="is-size-7">Input Image</p>
           </div>
-          <div class="visualization-item">
-            <video autoplay muted loop playsinline>
-              <source src="./new_assets/all_qual_results/camel__variant_000__bg_bmx-trees_orbit_neg_x.mp4" type="video/mp4">
-            </video>
-            <p class="is-size-7">Output Video</p>
+          <div class="media-item">
+            <p class="media-label">Output Video</p>
+            <video autoplay muted loop playsinline><source src="./new_assets/all_qual_results/camel__variant_000__bg_bmx-trees_orbit_neg_x.mp4" type="video/mp4"></video>
           </div>
-          <p class="sample-prompt"><strong>Prompt:</strong> ""</p>
+          <!-- <p class="sample-prompt"><strong>Prompt:</strong> ""</p> -->
         </div>
 
-        <div class="visualization-row">
-          <div class="visualization-item">
+        <div class="media-grid">
+          <div class="media-item">
+            <p class="media-label">Input Image</p>
             <img src="./new_assets/all_qual_results/thumbnails/dog__variant_000__bg_bmx-trees_orbit_pos_x.mp4.png" alt="Input image">
-            <p class="is-size-7">Input Image</p>
           </div>
-          <div class="visualization-item">
-            <video autoplay muted loop playsinline>
-              <source src="./new_assets/all_qual_results/dog__variant_000__bg_bmx-trees_orbit_pos_x.mp4" type="video/mp4">
-            </video>
-            <p class="is-size-7">Output Video</p>
+          <div class="media-item">
+            <p class="media-label">Output Video</p>
+            <video autoplay muted loop playsinline><source src="./new_assets/all_qual_results/dog__variant_000__bg_bmx-trees_orbit_pos_x.mp4" type="video/mp4"></video>
           </div>
-          <p class="sample-prompt"><strong>Prompt:</strong> ""</p>
+          <!-- <p class="sample-prompt"><strong>Prompt:</strong> ""</p> -->
         </div>
 
-        <div class="visualization-row">
-          <div class="visualization-item">
+        <div class="media-grid">
+          <div class="media-item">
+            <p class="media-label">Input Image</p>
             <img src="./new_assets/all_qual_results/thumbnails/hike__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Input image">
-            <p class="is-size-7">Input Image</p>
           </div>
-          <div class="visualization-item">
-            <video autoplay muted loop playsinline>
-              <source src="./new_assets/all_qual_results/hike__variant_000__bg_bmx-trees_orbit_neg_x.mp4" type="video/mp4">
-            </video>
-            <p class="is-size-7">Output Video</p>
+          <div class="media-item">
+            <p class="media-label">Output Video</p>
+            <video autoplay muted loop playsinline><source src="./new_assets/all_qual_results/hike__variant_000__bg_bmx-trees_orbit_neg_x.mp4" type="video/mp4"></video>
           </div>
-          <p class="sample-prompt"><strong>Prompt:</strong> ""</p>
+          <!-- <p class="sample-prompt"><strong>Prompt:</strong> ""</p> -->
         </div>
 
-        <div class="visualization-row">
-          <div class="visualization-item">
+        <div class="media-grid">
+          <div class="media-item">
+            <p class="media-label">Input Image</p>
             <img src="./new_assets/all_qual_results/thumbnails/hike__variant_000__bg_bmx-trees_orbit_neg_y.mp4.png" alt="Input image">
-            <p class="is-size-7">Input Image</p>
           </div>
-          <div class="visualization-item">
-            <video autoplay muted loop playsinline>
-              <source src="./new_assets/all_qual_results/hike__variant_000__bg_bmx-trees_orbit_neg_y.mp4" type="video/mp4">
-            </video>
-            <p class="is-size-7">Output Video</p>
+          <div class="media-item">
+            <p class="media-label">Output Video</p>
+            <video autoplay muted loop playsinline><source src="./new_assets/all_qual_results/hike__variant_000__bg_bmx-trees_orbit_neg_y.mp4" type="video/mp4"></video>
           </div>
-          <p class="sample-prompt"><strong>Prompt:</strong> ""</p>
+          <!-- <p class="sample-prompt"><strong>Prompt:</strong> ""</p> -->
         </div>
 
-        <div class="visualization-row">
-          <div class="visualization-item">
+        <div class="media-grid">
+          <div class="media-item">
+            <p class="media-label">Input Image</p>
             <img src="./new_assets/all_qual_results/thumbnails/skate-park__variant_000__bg_bmx-trees_orbit_pos_x.mp4.png" alt="Input image">
-            <p class="is-size-7">Input Image</p>
           </div>
-          <div class="visualization-item">
-            <video autoplay muted loop playsinline>
-              <source src="./new_assets/all_qual_results/skate-park__variant_000__bg_bmx-trees_orbit_pos_x.mp4" type="video/mp4">
-            </video>
-            <p class="is-size-7">Output Video</p>
+          <div class="media-item">
+            <p class="media-label">Output Video</p>
+            <video autoplay muted loop playsinline><source src="./new_assets/all_qual_results/skate-park__variant_000__bg_bmx-trees_orbit_pos_x.mp4" type="video/mp4"></video>
           </div>
-          <p class="sample-prompt"><strong>Prompt:</strong> ""</p>
+          <!-- <p class="sample-prompt"><strong>Prompt:</strong> ""</p> -->
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-
-<!-- ==================== Quantitative Results ====================
-     Method comparison videos
-     ============================================================== -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Comparison Results</h2>
-
-        <style>
-          .comparison-container {
-            width: 100%;
-            overflow-x: auto;
-          }
-          .comparison-header {
-            display: flex;
-            justify-content: center;
-            flex-wrap: nowrap;
-            gap: 0.35em;
-            margin-bottom: 0.6em;
-          }
-          .comparison-header .method-name {
-            flex: 1 1 0;
-            max-width: 260px;
-            text-align: center;
-            font-weight: 700;
-            font-size: 0.95em;
-          }
-          .comparison-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0.35em;
-            margin-bottom: 1.25em;
-          }
-          .comparison-row .comp-video {
-            flex: 1 1 0;
-            max-width: 260px;
-            text-align: center;
-          }
-          .comparison-row .comp-video img,
-          .comparison-row .comp-video video {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
-            background: #fff;
-            border-radius: 0.3em;
-            box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
-          }
-          .comp-video .video-label {
-            display: none;
-            font-size: 0.78em;
-            font-weight: 700;
-            margin-bottom: 0.25em;
-            color: #363636;
-          }
-          .comp-video .video-label.label-ours {
-            color: #1f77b4;
-          }
-          .comp-video .video-label.label-groundtruth {
-            color: #f28c28;
-          }
-          .comparison-row .comparison-prompt {
-            flex: 0 0 100%;
-            max-width: 1080px;
-            margin: 0.5em auto 0;
-            padding: 0.35em 1em 0;
-            text-align: center;
-            font-size: 1.15em;
-            line-height: 1.45;
-          }
-          .mobile-tabs {
-            display: none;
-          }
-
-          @media screen and (max-width: 768px) {
-            .comparison-header {
-              display: none;
-            }
-            .mobile-tabs {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-              gap: 0.4em;
-              margin-bottom: 1em;
-            }
-            .mobile-tab {
-              padding: 0.4em 0.8em;
-              border: 2px solid #ddd;
-              border-radius: 0.5em;
-              cursor: pointer;
-              font-size: 0.8em;
-              background: white;
-              transition: all 0.2s;
-            }
-            .mobile-tab.active {
-              background: #13294B;
-              color: white;
-              border-color: #13294B;
-            }
-            .comparison-row {
-              display: none;
-              flex-wrap: wrap;
-              gap: 0.5em;
-            }
-            .comparison-row.mobile-active {
-              display: flex;
-            }
-            .comparison-row .comp-video {
-              flex: 0 0 calc(50% - 0.5em);
-              max-width: calc(50% - 0.5em);
-            }
-            .comp-video .video-label {
-              display: block;
-            }
-            .comparison-row .comparison-prompt {
-              font-size: 1em;
-            }
-          }
-
-          @media screen and (max-width: 480px) {
-            .comparison-row .comp-video {
-              flex: 0 0 calc(50% - 0.5em);
-              max-width: calc(50% - 0.5em);
-            }
-          }
-        </style>
 
         <div class="comparison-container">
           <div class="mobile-tabs">
@@ -559,135 +356,92 @@
             <div class="method-name">Input Image</div>
             <div class="method-name">ATI</div>
             <div class="method-name">WanMove</div>
-            <div class="method-name" style="color: #f28c28;">Groundtruth</div>
-            <div class="method-name" style="color: #1f77b4;">Ours</div>
+            <div class="method-name label-groundtruth">Groundtruth</div>
+            <div class="method-name label-ours">Ours</div>
           </div>
 
           <div class="comparison-row mobile-active" data-case="0">
-            <div class="comp-video"><span class="video-label">Input Image</span><img src="./new_assets/all_qual_results/thumbnails/bear__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Bear input image"></div>
-            <div class="comp-video"><span class="video-label">ATI</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/bear.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label">WanMove</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/bear.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label label-groundtruth">Groundtruth</span><video autoplay muted loop playsinline><source src="./new_assets/compare/5_ground_truth_videos/bear.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label label-ours">Ours</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/bear.mp4" type="video/mp4"></video></div>
-            <p class="comparison-prompt"><strong>Prompt:</strong> ""</p>
+            <div class="comp-video"><img src="./new_assets/all_qual_results/thumbnails/bear__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Bear input image"></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/bear.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/bear.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/5_ground_truth_videos/bear.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/bear.mp4" type="video/mp4"></video></div>
+            <!-- <p class="comparison-prompt"><strong>Prompt:</strong> ""</p> -->
           </div>
 
           <div class="comparison-row" data-case="1">
-            <div class="comp-video"><span class="video-label">Input Image</span><img src="./new_assets/all_qual_results/thumbnails/camel__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Camel input image"></div>
-            <div class="comp-video"><span class="video-label">ATI</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/camel.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label">WanMove</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/camel.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label label-groundtruth">Groundtruth</span><video autoplay muted loop playsinline><source src="./new_assets/compare/5_ground_truth_videos/camel.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label label-ours">Ours</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/camel.mp4" type="video/mp4"></video></div>
-            <p class="comparison-prompt"><strong>Prompt:</strong> ""</p>
+            <div class="comp-video"><img src="./new_assets/all_qual_results/thumbnails/camel__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Camel input image"></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/camel.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/camel.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/5_ground_truth_videos/camel.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/camel.mp4" type="video/mp4"></video></div>
+            <!-- <p class="comparison-prompt"><strong>Prompt:</strong> ""</p> -->
           </div>
 
           <div class="comparison-row" data-case="2">
-            <div class="comp-video"><span class="video-label">Input Image</span><img src="./new_assets/all_qual_results/thumbnails/dog__variant_000__bg_bmx-trees_orbit_pos_x.mp4.png" alt="Dog input image"></div>
-            <div class="comp-video"><span class="video-label">ATI</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/dog.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label">WanMove</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/dog.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label label-groundtruth">Groundtruth</span><video autoplay muted loop playsinline><source src="./new_assets/compare/5_ground_truth_videos/dog.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label label-ours">Ours</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/dog.mp4" type="video/mp4"></video></div>
-            <p class="comparison-prompt"><strong>Prompt:</strong> ""</p>
+            <div class="comp-video"><img src="./new_assets/all_qual_results/thumbnails/dog__variant_000__bg_bmx-trees_orbit_pos_x.mp4.png" alt="Dog input image"></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/dog.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/dog.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/5_ground_truth_videos/dog.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/dog.mp4" type="video/mp4"></video></div>
+            <!-- <p class="comparison-prompt"><strong>Prompt:</strong> ""</p> -->
           </div>
 
           <div class="comparison-row" data-case="3">
-            <div class="comp-video"><span class="video-label">Input Image</span><img src="./new_assets/all_qual_results/thumbnails/hike__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Hike input image"></div>
-            <div class="comp-video"><span class="video-label">ATI</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/hike.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label">WanMove</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/hike.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label label-groundtruth">Groundtruth</span><video autoplay muted loop playsinline><source src="./new_assets/compare/5_ground_truth_videos/hike.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label label-ours">Ours</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/hike.mp4" type="video/mp4"></video></div>
-            <p class="comparison-prompt"><strong>Prompt:</strong> ""</p>
+            <div class="comp-video"><img src="./new_assets/all_qual_results/thumbnails/hike__variant_000__bg_bmx-trees_orbit_neg_x.mp4.png" alt="Hike input image"></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/hike.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/hike.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/5_ground_truth_videos/hike.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/hike.mp4" type="video/mp4"></video></div>
+            <!-- <p class="comparison-prompt"><strong>Prompt:</strong> ""</p> -->
           </div>
 
           <div class="comparison-row" data-case="4">
-            <div class="comp-video"><span class="video-label">Input Image</span><img src="./new_assets/all_qual_results/thumbnails/skate-park__variant_000__bg_bmx-trees_orbit_pos_x.mp4.png" alt="Skate park input image"></div>
-            <div class="comp-video"><span class="video-label">ATI</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/skate-park.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label">WanMove</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/skate-park.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label label-groundtruth">Groundtruth</span><video autoplay muted loop playsinline><source src="./new_assets/compare/5_ground_truth_videos/skate-park.mp4" type="video/mp4"></video></div>
-            <div class="comp-video"><span class="video-label label-ours">Ours</span><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/skate-park.mp4" type="video/mp4"></video></div>
-            <p class="comparison-prompt"><strong>Prompt:</strong> ""</p>
+            <div class="comp-video"><img src="./new_assets/all_qual_results/thumbnails/skate-park__variant_000__bg_bmx-trees_orbit_pos_x.mp4.png" alt="Skate park input image"></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ATI/skate-park.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_wanmove/skate-park.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/5_ground_truth_videos/skate-park.mp4" type="video/mp4"></video></div>
+            <div class="comp-video"><video autoplay muted loop playsinline><source src="./new_assets/compare/frame_videos_ours/skate-park.mp4" type="video/mp4"></video></div>
+            <!-- <p class="comparison-prompt"><strong>Prompt:</strong> ""</p> -->
           </div>
         </div>
-
-        <script>
-          document.querySelectorAll('.mobile-tab').forEach(function(tab) {
-            tab.addEventListener('click', function() {
-              var caseId = this.dataset.case;
-              document.querySelectorAll('.mobile-tab').forEach(function(t) { t.classList.remove('active'); });
-              this.classList.add('active');
-              document.querySelectorAll('.comparison-row').forEach(function(row) {
-                row.classList.remove('mobile-active');
-                row.querySelectorAll('video').forEach(function(v) { v.pause(); });
-              });
-              var activeRow = document.querySelector('.comparison-row[data-case="' + caseId + '"]');
-              activeRow.classList.add('mobile-active');
-              activeRow.querySelectorAll('video').forEach(function(v) { v.currentTime = 0; v.play(); });
-            });
-          });
-        </script>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== Part 11: Footer ====================
-     Footer and copyright notice
-     - includes PDF and GitHub icon links
-     - site license info (CC BY-SA 4.0)
-     - template credit
-     =============================================================== -->
 <footer class="footer">
   <div class="container">
-    <!-- Template credit -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content has-text-centered">
-          <p>
-            Anonymous project page.
-          </p>
+          <p>Anonymous project page.</p>
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Back to top button -->
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
-<style>
-  #back-to-top {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 44px;
-    height: 44px;
-    background: #13294B;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 16px rgba(19, 41, 75, 0.35);
-    opacity: 0;
-    transform: translateY(12px);
-    transition: opacity 0.25s ease, transform 0.25s ease, background-color 0.2s ease;
-    z-index: 999;
-    pointer-events: none;
-  }
-  #back-to-top.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-  #back-to-top:hover {
-    background: #1e3a66;
-    box-shadow: 0 6px 20px rgba(19, 41, 75, 0.45);
-  }
-</style>
+
 <script>
+  document.querySelectorAll('.mobile-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var caseId = this.dataset.case;
+      document.querySelectorAll('.mobile-tab').forEach(function(t) { t.classList.remove('active'); });
+      this.classList.add('active');
+      document.querySelectorAll('.comparison-row').forEach(function(row) {
+        row.classList.remove('mobile-active');
+        row.querySelectorAll('video').forEach(function(v) { v.pause(); });
+      });
+      var activeRow = document.querySelector('.comparison-row[data-case="' + caseId + '"]');
+      activeRow.classList.add('mobile-active');
+      activeRow.querySelectorAll('video').forEach(function(v) { v.currentTime = 0; v.play(); });
+    });
+  });
+
   var btn = document.getElementById('back-to-top');
   window.addEventListener('scroll', function() {
     if (window.scrollY > 300) {
