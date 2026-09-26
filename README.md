@@ -11,7 +11,7 @@ The page explains the method and includes interactive illustrations, authored 3D
 - `site/`: deployable HTML, figures, PDFs, images, and MP4 videos.
 - `src/page.html`: page content and styles.
 - `src/app.js`: interactive figures, selectors, and video playback.
-- `src/gallery-data.json`: the 15 examples with relative paths to the packaged media.
+- `src/gallery-data.json`: the 16 examples with relative paths to the packaged media.
 - `scripts/build.py`: dependency-free, deterministic HTML build and asset checks.
 - `scripts/serve.mjs`: local preview server with MP4 byte-range support.
 - `.github/workflows/pages.yml`: validates and deploys only `site/` on pushes to `main`.

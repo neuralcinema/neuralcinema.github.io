@@ -3,7 +3,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const motionReduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let playing=!motionReduced,modalOpen=false;
-const labels=['Bus · turning','Hiker','Hoverboard · sweeping path','Hoverboard · turning','Goldfish','Bike-packing','Bus · moving forward','Sea turtle','Hoverboard · fixed camera','Living room · moving camera','Living room · fixed camera','Garden vase · moving camera','Garden vase · fixed camera','Girl & dog · moving camera','Girl & dog · fixed camera'];
+const labels=['Bus · turning','Hiker','Hoverboard · sweeping path','Hoverboard · turning','Goldfish','Bike-packing','Bus · moving forward','Sea turtle','Hoverboard · fixed camera','Living room · moving camera','Living room · fixed camera','Garden vase · moving camera','Garden vase · fixed camera','Girl & dog · moving camera','Girl & dog · fixed camera','Robotic arm · pushing a box'];
 const isFixed=c=>c.instruction.includes('Keep the camera viewpoint fixed');
 const videoObserver=new IntersectionObserver(entries=>{for(const e of entries){e.target.dataset.visible=e.isIntersecting?'yes':'no';if(e.isIntersecting)ensureLoaded(e.target);updateVideo(e.target);}},{threshold:0.12});
 function ensureLoaded(v){if(v.dataset.src&&v.getAttribute('src')!==v.dataset.src){v.src=v.dataset.src;v.load();}}
@@ -14,7 +14,7 @@ function watchVideo(v){videoObserver.observe(v);v.addEventListener('error',()=>{
 function setPressed(parent,attribute,value){parent.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.getAttribute(attribute)===String(value))));}
 $('globalPlay').addEventListener('click',()=>{playing=!playing;refreshPlayback();});
 document.addEventListener('visibilitychange',refreshPlayback);
-const featured=[{i:2,label:'Hoverboard'},{i:7,label:'Sea turtle'},{i:9,label:'Living room'},{i:11,label:'Garden vase'},{i:13,label:'Girl & dog'}];
+const featured=[{i:2,label:'Hoverboard'},{i:7,label:'Sea turtle'},{i:9,label:'Living room'},{i:11,label:'Garden vase'},{i:13,label:'Girl & dog'},{i:15,label:'Robotic arm'}];
 function setHero(i){const c=DATA.cases[i];$('heroInput').src=c.inputData;$('heroInput').alt=labels[i]+' input image';bindVideo($('heroControl'),c.scene);bindVideo($('heroResult'),c.models.find(x=>x.key==='ours'));$('heroCaption').textContent=labels[i]+'. '+c.instruction;setPressed($('heroTabs'),'data-case',i);$('examplePickerStatus').textContent='Viewing '+(featured.findIndex(x=>x.i===i)+1)+' / '+featured.length;}
 $('heroTabs').innerHTML=featured.map((x,index)=>`<button type="button" data-case="${x.i}" aria-pressed="false" aria-controls="heroPreview" aria-label="Show ${x.label} example"><span class="scene-step" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><span>${x.label}</span></button>`).join('');
 $('heroTabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setHero(+b.dataset.case);});

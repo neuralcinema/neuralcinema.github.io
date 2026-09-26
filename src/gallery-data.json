@@ -1834,6 +1834,127 @@
           "duration_seconds": 3.5
         }
       ]
+    },
+    {
+      "id": "droid_18770_ext1__j6cbcc664",
+      "sample": "droid_18770_ext1",
+      "instruction": "A robotic arm pushes the box off the table, and the box drops. Keep the camera viewpoint fixed.",
+      "inputData": "media/robot-box/input.png",
+      "annotationData": "media/robot-box/control-2d.png",
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/robot-box/ours.mp4",
+          "videoData": "media/robot-box/ours.mp4",
+          "posterData": "media/robot-box/ours.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/robot-box/wan_move.mp4",
+          "videoData": "media/robot-box/wan_move.mp4",
+          "posterData": "media/robot-box/wan_move.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/robot-box/ati.mp4",
+          "videoData": "media/robot-box/ati.mp4",
+          "posterData": "media/robot-box/ati.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/robot-box/gowiththetrack.mp4",
+          "videoData": "media/robot-box/gowiththetrack.mp4",
+          "posterData": "media/robot-box/gowiththetrack.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/robot-box/versecrafter.mp4",
+          "videoData": "media/robot-box/versecrafter.mp4",
+          "posterData": "media/robot-box/versecrafter.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/robot-box/symphomotion.mp4",
+          "videoData": "media/robot-box/symphomotion.mp4",
+          "posterData": "media/robot-box/symphomotion.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ],
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/droid_18770_ext1__j6cbcc664__scene.mp4",
+        "videoData": "media/controls-v2/droid_18770_ext1__j6cbcc664__scene.mp4",
+        "posterData": "media/controls-v2/droid_18770_ext1__j6cbcc664__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/droid_18770_ext1__j6cbcc664__camera.mp4",
+        "videoData": "media/controls-v2/droid_18770_ext1__j6cbcc664__camera.mp4",
+        "posterData": "media/controls-v2/droid_18770_ext1__j6cbcc664__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      }
     }
   ],
   "loop_duration_seconds": 3.5,
