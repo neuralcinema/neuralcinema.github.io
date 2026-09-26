@@ -35,5 +35,3 @@ Open `http://localhost:8780`. Edit the files in `src/`, rebuild, and commit the 
 GitHub Actions deploys with its built-in short-lived credentials. No personal access token or repository secret is required by the workflow.
 
 The page contains no visitor analytics, tracking pixels, cookies, local storage, telemetry, or remote embeds. Its Content Security Policy restricts assets to the same origin and blocks scripted network connections. The browser referrer policy is `no-referrer`.
-
-GitHub operates the hosting infrastructure. [GitHub documents that Pages retains visitor IP addresses for security](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection). These hosting records cannot be disabled by this static website.
