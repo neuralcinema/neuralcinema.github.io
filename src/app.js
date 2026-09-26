@@ -14,7 +14,7 @@ function watchVideo(v){videoObserver.observe(v);v.addEventListener('error',()=>{
 function setPressed(parent,attribute,value){parent.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.getAttribute(attribute)===String(value))));}
 $('globalPlay').addEventListener('click',()=>{playing=!playing;refreshPlayback();});
 document.addEventListener('visibilitychange',refreshPlayback);
-const featured=[{i:2,label:'Hoverboard'},{i:7,label:'Sea turtle'},{i:9,label:'Living room'},{i:11,label:'Garden vase'},{i:13,label:'Girl & dog'},{i:15,label:'Robotic arm'}];
+const featured=[{i:2,label:'Hoverboard'},{i:7,label:'Sea turtle'},{i:9,label:'Living room'},{i:11,label:'Garden vase'},{i:13,label:'Girl & dog'}];
 function setHero(i){const c=DATA.cases[i];$('heroInput').src=c.inputData;$('heroInput').alt=labels[i]+' input image';bindVideo($('heroControl'),c.scene);bindVideo($('heroResult'),c.models.find(x=>x.key==='ours'));$('heroCaption').textContent=labels[i]+'. '+c.instruction;setPressed($('heroTabs'),'data-case',i);$('examplePickerStatus').textContent='Viewing '+(featured.findIndex(x=>x.i===i)+1)+' / '+featured.length;}
 $('heroTabs').innerHTML=featured.map((x,index)=>`<button type="button" data-case="${x.i}" aria-pressed="false" aria-controls="heroPreview" aria-label="Show ${x.label} example"><span class="scene-step" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><span>${x.label}</span></button>`).join('');
 $('heroTabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setHero(+b.dataset.case);});
