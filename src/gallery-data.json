@@ -1,0 +1,1841 @@
+{
+  "study_version": "gallery-preference-v4",
+  "familyNames": {
+    "bus": "Bus",
+    "hike": "Hike",
+    "hoverboard": "Hoverboard",
+    "gold-fish": "Goldfish",
+    "bike-packing": "Bike-packing",
+    "sea-turtle": "Sea turtle",
+    "teaser": "Living room",
+    "gardenvase_720_first6s_no_rendering": "Garden vase",
+    "dogs-jump": "Dogs"
+  },
+  "models": {
+    "ours": "Ours",
+    "wan_move": "Wan-Move",
+    "ati": "ATI",
+    "gowiththetrack": "Go-with-the-Track",
+    "versecrafter": "VerseCrafter",
+    "symphomotion": "SymphoMotion"
+  },
+  "cases": [
+    {
+      "id": "bus__j6cef0616",
+      "sample": "bus",
+      "instruction": "Move and turn the bus along the highlighted control paths. Follow the camera movement shown in the 3D view.",
+      "inputData": "media/bus__j6cef0616__original__1cc61dbcf0b2.jpg",
+      "annotationData": "media/bus__j6cef0616__control_2d__9d13950810f0.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/bus__j6cef0616__camera.mp4",
+        "videoData": "media/controls-v2/bus__j6cef0616__camera.mp4",
+        "posterData": "media/controls-v2/bus__j6cef0616__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/bus__j6cef0616__scene.mp4",
+        "videoData": "media/controls-v2/bus__j6cef0616__scene.mp4",
+        "posterData": "media/controls-v2/bus__j6cef0616__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/bus__j6cef0616__ours__dea944ffffa5.mp4",
+          "videoData": "media/bus__j6cef0616__ours__dea944ffffa5.mp4",
+          "posterData": "media/bus__j6cef0616__ours_poster__7c412ec2bb9e.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/bus__j6cef0616__wan_move__0ecb0fe66bf5.mp4",
+          "videoData": "media/bus__j6cef0616__wan_move__0ecb0fe66bf5.mp4",
+          "posterData": "media/bus__j6cef0616__wan_move_poster__68a040031336.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/bus__j6cef0616__ati__f7d5b77f6c4c.mp4",
+          "videoData": "media/bus__j6cef0616__ati__f7d5b77f6c4c.mp4",
+          "posterData": "media/bus__j6cef0616__ati_poster__c042f506e371.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/bus__j6cef0616__gowiththetrack__b253ed62d780.mp4",
+          "videoData": "media/bus__j6cef0616__gowiththetrack__b253ed62d780.mp4",
+          "posterData": "media/bus__j6cef0616__gowiththetrack_poster__e7552f183bcd.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/bus__j6cef0616__versecrafter__be35edfe8c6b.mp4",
+          "videoData": "media/bus__j6cef0616__versecrafter__be35edfe8c6b.mp4",
+          "posterData": "media/bus__j6cef0616__versecrafter_poster__f3077e6c1b52.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/bus__j6cef0616__symphomotion__42e94821c985.mp4",
+          "videoData": "media/bus__j6cef0616__symphomotion__42e94821c985.mp4",
+          "posterData": "media/bus__j6cef0616__symphomotion_poster__65a79466cead.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "hike__j1a0b8606",
+      "sample": "hike",
+      "instruction": "Move and turn the hiker along the highlighted control paths. Follow the camera movement shown in the 3D view.",
+      "inputData": "media/hike__j1a0b8606__original__f4a7cb9b2971.jpg",
+      "annotationData": "media/hike__j1a0b8606__control_2d__20bbbf5804ea.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/hike__j1a0b8606__camera.mp4",
+        "videoData": "media/controls-v2/hike__j1a0b8606__camera.mp4",
+        "posterData": "media/controls-v2/hike__j1a0b8606__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/hike__j1a0b8606__scene.mp4",
+        "videoData": "media/controls-v2/hike__j1a0b8606__scene.mp4",
+        "posterData": "media/controls-v2/hike__j1a0b8606__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/hike__j1a0b8606__ours__ca6f09f91c3a.mp4",
+          "videoData": "media/hike__j1a0b8606__ours__ca6f09f91c3a.mp4",
+          "posterData": "media/hike__j1a0b8606__ours_poster__9524e6086571.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/hike__j1a0b8606__wan_move__aa3e5fb0f6a8.mp4",
+          "videoData": "media/hike__j1a0b8606__wan_move__aa3e5fb0f6a8.mp4",
+          "posterData": "media/hike__j1a0b8606__wan_move_poster__05e36b62535a.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/hike__j1a0b8606__ati__38f798657221.mp4",
+          "videoData": "media/hike__j1a0b8606__ati__38f798657221.mp4",
+          "posterData": "media/hike__j1a0b8606__ati_poster__5a1a8f26009a.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/hike__j1a0b8606__gowiththetrack__dcd29b3f776e.mp4",
+          "videoData": "media/hike__j1a0b8606__gowiththetrack__dcd29b3f776e.mp4",
+          "posterData": "media/hike__j1a0b8606__gowiththetrack_poster__35e527d57c33.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/hike__j1a0b8606__versecrafter__154d4cc8aed2.mp4",
+          "videoData": "media/hike__j1a0b8606__versecrafter__154d4cc8aed2.mp4",
+          "posterData": "media/hike__j1a0b8606__versecrafter_poster__e2cdb47b9030.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/hike__j1a0b8606__symphomotion__654afcf26886.mp4",
+          "videoData": "media/hike__j1a0b8606__symphomotion__654afcf26886.mp4",
+          "posterData": "media/hike__j1a0b8606__symphomotion_poster__c21ee884459d.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "hoverboard__j8c49feb2",
+      "sample": "hoverboard",
+      "instruction": "Move the rider along the highlighted control paths. Follow the camera movement shown in the 3D view.",
+      "inputData": "media/hoverboard__j8c49feb2__original__e3525c7087c2.jpg",
+      "annotationData": "media/hoverboard__j8c49feb2__control_2d__8338a5fca1ad.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/hoverboard__j8c49feb2__camera.mp4",
+        "videoData": "media/controls-v2/hoverboard__j8c49feb2__camera.mp4",
+        "posterData": "media/controls-v2/hoverboard__j8c49feb2__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/hoverboard__j8c49feb2__scene.mp4",
+        "videoData": "media/controls-v2/hoverboard__j8c49feb2__scene.mp4",
+        "posterData": "media/controls-v2/hoverboard__j8c49feb2__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/hoverboard__j8c49feb2__ours__3a76ea04fd46.mp4",
+          "videoData": "media/hoverboard__j8c49feb2__ours__3a76ea04fd46.mp4",
+          "posterData": "media/hoverboard__j8c49feb2__ours_poster__8ec7b74427c1.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/hoverboard__j8c49feb2__wan_move__93c77611ab37.mp4",
+          "videoData": "media/hoverboard__j8c49feb2__wan_move__93c77611ab37.mp4",
+          "posterData": "media/hoverboard__j8c49feb2__wan_move_poster__6321448bc3a1.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/hoverboard__j8c49feb2__ati__345a9330d038.mp4",
+          "videoData": "media/hoverboard__j8c49feb2__ati__345a9330d038.mp4",
+          "posterData": "media/hoverboard__j8c49feb2__ati_poster__7329374731f4.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/hoverboard__j8c49feb2__gowiththetrack__1943084585fa.mp4",
+          "videoData": "media/hoverboard__j8c49feb2__gowiththetrack__1943084585fa.mp4",
+          "posterData": "media/hoverboard__j8c49feb2__gowiththetrack_poster__0f3553140a4d.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/hoverboard__j8c49feb2__versecrafter__1ecc45d8d39f.mp4",
+          "videoData": "media/hoverboard__j8c49feb2__versecrafter__1ecc45d8d39f.mp4",
+          "posterData": "media/hoverboard__j8c49feb2__versecrafter_poster__c91577633e9d.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/hoverboard__j8c49feb2__symphomotion__350fa755279f.mp4",
+          "videoData": "media/hoverboard__j8c49feb2__symphomotion__350fa755279f.mp4",
+          "posterData": "media/hoverboard__j8c49feb2__symphomotion_poster__66432492a872.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "hoverboard__jc44addd9",
+      "sample": "hoverboard",
+      "instruction": "Move and turn the rider along the highlighted control paths. Follow the camera movement shown in the 3D view.",
+      "inputData": "media/hoverboard__jc44addd9__original__e3525c7087c2.jpg",
+      "annotationData": "media/hoverboard__jc44addd9__control_2d__9654b138a265.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/hoverboard__jc44addd9__camera.mp4",
+        "videoData": "media/controls-v2/hoverboard__jc44addd9__camera.mp4",
+        "posterData": "media/controls-v2/hoverboard__jc44addd9__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/hoverboard__jc44addd9__scene.mp4",
+        "videoData": "media/controls-v2/hoverboard__jc44addd9__scene.mp4",
+        "posterData": "media/controls-v2/hoverboard__jc44addd9__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/hoverboard__jc44addd9__ours__ea6807196c65.mp4",
+          "videoData": "media/hoverboard__jc44addd9__ours__ea6807196c65.mp4",
+          "posterData": "media/hoverboard__jc44addd9__ours_poster__bbdaff42fdf5.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/hoverboard__jc44addd9__wan_move__93edda9a54fd.mp4",
+          "videoData": "media/hoverboard__jc44addd9__wan_move__93edda9a54fd.mp4",
+          "posterData": "media/hoverboard__jc44addd9__wan_move_poster__1965fb71586e.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/hoverboard__jc44addd9__ati__ed73c375a0be.mp4",
+          "videoData": "media/hoverboard__jc44addd9__ati__ed73c375a0be.mp4",
+          "posterData": "media/hoverboard__jc44addd9__ati_poster__9e9beaa6b22e.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/hoverboard__jc44addd9__gowiththetrack__ca1a42c060ff.mp4",
+          "videoData": "media/hoverboard__jc44addd9__gowiththetrack__ca1a42c060ff.mp4",
+          "posterData": "media/hoverboard__jc44addd9__gowiththetrack_poster__58e838c29721.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/hoverboard__jc44addd9__versecrafter__16913424df2f.mp4",
+          "videoData": "media/hoverboard__jc44addd9__versecrafter__16913424df2f.mp4",
+          "posterData": "media/hoverboard__jc44addd9__versecrafter_poster__0f7eaab56e7f.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/hoverboard__jc44addd9__symphomotion__875872982379.mp4",
+          "videoData": "media/hoverboard__jc44addd9__symphomotion__875872982379.mp4",
+          "posterData": "media/hoverboard__jc44addd9__symphomotion_poster__56cc44cb0e90.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "gold-fish__jf404c370",
+      "sample": "gold-fish",
+      "instruction": "Move the goldfish along the highlighted control paths. Keep the camera viewpoint fixed.",
+      "inputData": "media/gold-fish__jf404c370__original__a56f924d760d.jpg",
+      "annotationData": "media/gold-fish__jf404c370__control_2d__b641730f56f7.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/gold-fish__jf404c370__camera.mp4",
+        "videoData": "media/controls-v2/gold-fish__jf404c370__camera.mp4",
+        "posterData": "media/controls-v2/gold-fish__jf404c370__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/gold-fish__jf404c370__scene.mp4",
+        "videoData": "media/controls-v2/gold-fish__jf404c370__scene.mp4",
+        "posterData": "media/controls-v2/gold-fish__jf404c370__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/gold-fish__jf404c370__ours__e07fc15301c6.mp4",
+          "videoData": "media/gold-fish__jf404c370__ours__e07fc15301c6.mp4",
+          "posterData": "media/gold-fish__jf404c370__ours_poster__bf2a4789d205.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/gold-fish__jf404c370__wan_move__d4b716e7fe69.mp4",
+          "videoData": "media/gold-fish__jf404c370__wan_move__d4b716e7fe69.mp4",
+          "posterData": "media/gold-fish__jf404c370__wan_move_poster__af64d797f5b6.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/gold-fish__jf404c370__ati__cf940e83be2b.mp4",
+          "videoData": "media/gold-fish__jf404c370__ati__cf940e83be2b.mp4",
+          "posterData": "media/gold-fish__jf404c370__ati_poster__03a776b6866a.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/gold-fish__jf404c370__gowiththetrack__67d4671bcfdd.mp4",
+          "videoData": "media/gold-fish__jf404c370__gowiththetrack__67d4671bcfdd.mp4",
+          "posterData": "media/gold-fish__jf404c370__gowiththetrack_poster__9cdced1b32e6.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/gold-fish__jf404c370__versecrafter__9d89590c2c53.mp4",
+          "videoData": "media/gold-fish__jf404c370__versecrafter__9d89590c2c53.mp4",
+          "posterData": "media/gold-fish__jf404c370__versecrafter_poster__8b421dcb10a2.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/gold-fish__jf404c370__symphomotion__127f8c96565c.mp4",
+          "videoData": "media/gold-fish__jf404c370__symphomotion__127f8c96565c.mp4",
+          "posterData": "media/gold-fish__jf404c370__symphomotion_poster__8fe023f45cea.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "bike-packing__seed117_k6_f49",
+      "sample": "bike-packing",
+      "instruction": "Move and turn the highlighted regions along the highlighted control paths. Follow the camera movement shown in the 3D view.",
+      "inputData": "media/bike-packing__seed117_k6_f49__original__78f3a1b2582b.jpg",
+      "annotationData": "media/bike-packing__seed117_k6_f49__control_2d__79d1fb301d7c.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/bike-packing__seed117_k6_f49__camera.mp4",
+        "videoData": "media/controls-v2/bike-packing__seed117_k6_f49__camera.mp4",
+        "posterData": "media/controls-v2/bike-packing__seed117_k6_f49__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/bike-packing__seed117_k6_f49__scene.mp4",
+        "videoData": "media/controls-v2/bike-packing__seed117_k6_f49__scene.mp4",
+        "posterData": "media/controls-v2/bike-packing__seed117_k6_f49__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/bike-packing__seed117_k6_f49__ours__85ddf69bf778.mp4",
+          "videoData": "media/bike-packing__seed117_k6_f49__ours__85ddf69bf778.mp4",
+          "posterData": "media/bike-packing__seed117_k6_f49__ours_poster__562147e5526f.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/bike-packing__seed117_k6_f49__wan_move__03b75891a75a.mp4",
+          "videoData": "media/bike-packing__seed117_k6_f49__wan_move__03b75891a75a.mp4",
+          "posterData": "media/bike-packing__seed117_k6_f49__wan_move_poster__ed26ee1d90c6.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/bike-packing__seed117_k6_f49__ati__c8c16c128730.mp4",
+          "videoData": "media/bike-packing__seed117_k6_f49__ati__c8c16c128730.mp4",
+          "posterData": "media/bike-packing__seed117_k6_f49__ati_poster__36e98b2071ba.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/bike-packing__seed117_k6_f49__gowiththetrack__59e1aae1ebc9.mp4",
+          "videoData": "media/bike-packing__seed117_k6_f49__gowiththetrack__59e1aae1ebc9.mp4",
+          "posterData": "media/bike-packing__seed117_k6_f49__gowiththetrack_poster__7c53638dcd73.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/bike-packing__seed117_k6_f49__versecrafter__34f34d6a25c2.mp4",
+          "videoData": "media/bike-packing__seed117_k6_f49__versecrafter__34f34d6a25c2.mp4",
+          "posterData": "media/bike-packing__seed117_k6_f49__versecrafter_poster__4d69c48369c4.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/bike-packing__seed117_k6_f49__symphomotion__de6a65e76d2d.mp4",
+          "videoData": "media/bike-packing__seed117_k6_f49__symphomotion__de6a65e76d2d.mp4",
+          "posterData": "media/bike-packing__seed117_k6_f49__symphomotion_poster__5d6bc986dab8.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "bus__j3906ec6a",
+      "sample": "bus",
+      "instruction": "Move the bus along the highlighted control paths. Follow the camera movement shown in the 3D view.",
+      "inputData": "media/bus__j3906ec6a__original__1cc61dbcf0b2.jpg",
+      "annotationData": "media/bus__j3906ec6a__control_2d__fc22a92f10c2.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/bus__j3906ec6a__camera.mp4",
+        "videoData": "media/controls-v2/bus__j3906ec6a__camera.mp4",
+        "posterData": "media/controls-v2/bus__j3906ec6a__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/bus__j3906ec6a__scene.mp4",
+        "videoData": "media/controls-v2/bus__j3906ec6a__scene.mp4",
+        "posterData": "media/controls-v2/bus__j3906ec6a__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/bus__j3906ec6a__ours__e3d87c104e82.mp4",
+          "videoData": "media/bus__j3906ec6a__ours__e3d87c104e82.mp4",
+          "posterData": "media/bus__j3906ec6a__ours_poster__54159dbc5c4d.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/bus__j3906ec6a__wan_move__d19ae74be259.mp4",
+          "videoData": "media/bus__j3906ec6a__wan_move__d19ae74be259.mp4",
+          "posterData": "media/bus__j3906ec6a__wan_move_poster__c69fb6e51e10.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/bus__j3906ec6a__ati__ae8b7b36c030.mp4",
+          "videoData": "media/bus__j3906ec6a__ati__ae8b7b36c030.mp4",
+          "posterData": "media/bus__j3906ec6a__ati_poster__560de99298e3.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/bus__j3906ec6a__gowiththetrack__fc5dc8ac85e7.mp4",
+          "videoData": "media/bus__j3906ec6a__gowiththetrack__fc5dc8ac85e7.mp4",
+          "posterData": "media/bus__j3906ec6a__gowiththetrack_poster__ef1c3693f253.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/bus__j3906ec6a__versecrafter__e8d2f07d76e8.mp4",
+          "videoData": "media/bus__j3906ec6a__versecrafter__e8d2f07d76e8.mp4",
+          "posterData": "media/bus__j3906ec6a__versecrafter_poster__0776f15b887d.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/bus__j3906ec6a__symphomotion__40f26f1bc6db.mp4",
+          "videoData": "media/bus__j3906ec6a__symphomotion__40f26f1bc6db.mp4",
+          "posterData": "media/bus__j3906ec6a__symphomotion_poster__b1a8b64c4598.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "sea-turtle__jd3e7014b",
+      "sample": "sea-turtle",
+      "instruction": "Move and turn the sea turtle along the highlighted control paths. Keep the camera viewpoint fixed.",
+      "inputData": "media/sea-turtle__jd3e7014b__original__b5eadbeb08a9.jpg",
+      "annotationData": "media/sea-turtle__jd3e7014b__control_2d__7586c6a22efe.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/sea-turtle__jd3e7014b__camera.mp4",
+        "videoData": "media/controls-v2/sea-turtle__jd3e7014b__camera.mp4",
+        "posterData": "media/controls-v2/sea-turtle__jd3e7014b__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/sea-turtle__jd3e7014b__scene.mp4",
+        "videoData": "media/controls-v2/sea-turtle__jd3e7014b__scene.mp4",
+        "posterData": "media/controls-v2/sea-turtle__jd3e7014b__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/sea-turtle__jd3e7014b__ours__fe2938b5f8c7.mp4",
+          "videoData": "media/sea-turtle__jd3e7014b__ours__fe2938b5f8c7.mp4",
+          "posterData": "media/sea-turtle__jd3e7014b__ours_poster__4610b3bcd1b7.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/sea-turtle__jd3e7014b__wan_move__942b36860fb2.mp4",
+          "videoData": "media/sea-turtle__jd3e7014b__wan_move__942b36860fb2.mp4",
+          "posterData": "media/sea-turtle__jd3e7014b__wan_move_poster__43102fbbba0c.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/sea-turtle__jd3e7014b__ati__1cb3969d3729.mp4",
+          "videoData": "media/sea-turtle__jd3e7014b__ati__1cb3969d3729.mp4",
+          "posterData": "media/sea-turtle__jd3e7014b__ati_poster__4828e5256fd2.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/sea-turtle__jd3e7014b__gowiththetrack__454182a33cd3.mp4",
+          "videoData": "media/sea-turtle__jd3e7014b__gowiththetrack__454182a33cd3.mp4",
+          "posterData": "media/sea-turtle__jd3e7014b__gowiththetrack_poster__b91e179fe1ac.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/sea-turtle__jd3e7014b__versecrafter__af3ae5e5ceaa.mp4",
+          "videoData": "media/sea-turtle__jd3e7014b__versecrafter__af3ae5e5ceaa.mp4",
+          "posterData": "media/sea-turtle__jd3e7014b__versecrafter_poster__c9525df58729.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/sea-turtle__jd3e7014b__symphomotion__667b1f005dc7.mp4",
+          "videoData": "media/sea-turtle__jd3e7014b__symphomotion__667b1f005dc7.mp4",
+          "posterData": "media/sea-turtle__jd3e7014b__symphomotion_poster__888ca5fab9db.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "hoverboard__j44ff7315",
+      "sample": "hoverboard",
+      "instruction": "Move and turn the rider along the highlighted control paths. Keep the camera viewpoint fixed.",
+      "inputData": "media/hoverboard__j44ff7315__original__e3525c7087c2.jpg",
+      "annotationData": "media/hoverboard__j44ff7315__control_2d__47b9a8f0770b.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/hoverboard__j44ff7315__camera.mp4",
+        "videoData": "media/controls-v2/hoverboard__j44ff7315__camera.mp4",
+        "posterData": "media/controls-v2/hoverboard__j44ff7315__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/hoverboard__j44ff7315__scene.mp4",
+        "videoData": "media/controls-v2/hoverboard__j44ff7315__scene.mp4",
+        "posterData": "media/controls-v2/hoverboard__j44ff7315__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/hoverboard__j44ff7315__ours__a9d6517356df.mp4",
+          "videoData": "media/hoverboard__j44ff7315__ours__a9d6517356df.mp4",
+          "posterData": "media/hoverboard__j44ff7315__ours_poster__5f797f12a08c.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/hoverboard__j44ff7315__wan_move__e3ef996de092.mp4",
+          "videoData": "media/hoverboard__j44ff7315__wan_move__e3ef996de092.mp4",
+          "posterData": "media/hoverboard__j44ff7315__wan_move_poster__9cb43b846174.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/hoverboard__j44ff7315__ati__929ee7f22ad4.mp4",
+          "videoData": "media/hoverboard__j44ff7315__ati__929ee7f22ad4.mp4",
+          "posterData": "media/hoverboard__j44ff7315__ati_poster__6dee33b7dfbb.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/hoverboard__j44ff7315__gowiththetrack__122423f01e43.mp4",
+          "videoData": "media/hoverboard__j44ff7315__gowiththetrack__122423f01e43.mp4",
+          "posterData": "media/hoverboard__j44ff7315__gowiththetrack_poster__fe9507c2d5ba.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/hoverboard__j44ff7315__versecrafter__4a900ff9aa77.mp4",
+          "videoData": "media/hoverboard__j44ff7315__versecrafter__4a900ff9aa77.mp4",
+          "posterData": "media/hoverboard__j44ff7315__versecrafter_poster__1145e0d3ea34.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/hoverboard__j44ff7315__symphomotion__755a3d7c97f8.mp4",
+          "videoData": "media/hoverboard__j44ff7315__symphomotion__755a3d7c97f8.mp4",
+          "posterData": "media/hoverboard__j44ff7315__symphomotion_poster__2d3d787a8ff1.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "teaser__j2837737a",
+      "sample": "teaser",
+      "instruction": "Move and turn the highlighted objects along the highlighted control paths. Follow the camera movement shown in the 3D view.",
+      "inputData": "media/teaser__j2837737a__original__ace6ca4833f9.jpg",
+      "annotationData": "media/teaser__j2837737a__control_2d__a1a6b383d45e.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/teaser__j2837737a__camera.mp4",
+        "videoData": "media/controls-v2/teaser__j2837737a__camera.mp4",
+        "posterData": "media/controls-v2/teaser__j2837737a__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/teaser__j2837737a__scene.mp4",
+        "videoData": "media/controls-v2/teaser__j2837737a__scene.mp4",
+        "posterData": "media/controls-v2/teaser__j2837737a__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/teaser__j2837737a__ours__4636e8945063.mp4",
+          "videoData": "media/teaser__j2837737a__ours__4636e8945063.mp4",
+          "posterData": "media/teaser__j2837737a__ours_poster__1724ec8c0b95.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/teaser__j2837737a__wan_move__b686ce5a8798.mp4",
+          "videoData": "media/teaser__j2837737a__wan_move__b686ce5a8798.mp4",
+          "posterData": "media/teaser__j2837737a__wan_move_poster__6ac469c9a867.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/teaser__j2837737a__ati__2596da543616.mp4",
+          "videoData": "media/teaser__j2837737a__ati__2596da543616.mp4",
+          "posterData": "media/teaser__j2837737a__ati_poster__d033f665eacb.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/teaser__j2837737a__gowiththetrack__8bb927c2be9f.mp4",
+          "videoData": "media/teaser__j2837737a__gowiththetrack__8bb927c2be9f.mp4",
+          "posterData": "media/teaser__j2837737a__gowiththetrack_poster__36081f3d092f.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/teaser__j2837737a__versecrafter__ad97829b62b0.mp4",
+          "videoData": "media/teaser__j2837737a__versecrafter__ad97829b62b0.mp4",
+          "posterData": "media/teaser__j2837737a__versecrafter_poster__e0230119155b.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/teaser__j2837737a__symphomotion__3a007caa7270.mp4",
+          "videoData": "media/teaser__j2837737a__symphomotion__3a007caa7270.mp4",
+          "posterData": "media/teaser__j2837737a__symphomotion_poster__41f9c2071acd.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "teaser__j294a1192",
+      "sample": "teaser",
+      "instruction": "Move and turn the highlighted objects along the highlighted control paths. Keep the camera viewpoint fixed.",
+      "inputData": "media/teaser__j294a1192__original__ace6ca4833f9.jpg",
+      "annotationData": "media/teaser__j294a1192__control_2d__d932973f3892.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/teaser__j294a1192__camera.mp4",
+        "videoData": "media/controls-v2/teaser__j294a1192__camera.mp4",
+        "posterData": "media/controls-v2/teaser__j294a1192__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/teaser__j294a1192__scene.mp4",
+        "videoData": "media/controls-v2/teaser__j294a1192__scene.mp4",
+        "posterData": "media/controls-v2/teaser__j294a1192__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/teaser__j294a1192__ours__1e4a28e9d19b.mp4",
+          "videoData": "media/teaser__j294a1192__ours__1e4a28e9d19b.mp4",
+          "posterData": "media/teaser__j294a1192__ours_poster__34df64b8eaf5.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/teaser__j294a1192__wan_move__ed4e2e0a2da3.mp4",
+          "videoData": "media/teaser__j294a1192__wan_move__ed4e2e0a2da3.mp4",
+          "posterData": "media/teaser__j294a1192__wan_move_poster__3ef72e749c38.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/teaser__j294a1192__ati__0e9637ffb807.mp4",
+          "videoData": "media/teaser__j294a1192__ati__0e9637ffb807.mp4",
+          "posterData": "media/teaser__j294a1192__ati_poster__b7c3a88dc3e1.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/teaser__j294a1192__gowiththetrack__0c70507ff164.mp4",
+          "videoData": "media/teaser__j294a1192__gowiththetrack__0c70507ff164.mp4",
+          "posterData": "media/teaser__j294a1192__gowiththetrack_poster__f41f4663b7c8.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/teaser__j294a1192__versecrafter__41ace318cd75.mp4",
+          "videoData": "media/teaser__j294a1192__versecrafter__41ace318cd75.mp4",
+          "posterData": "media/teaser__j294a1192__versecrafter_poster__431dd4cfcfef.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/teaser__j294a1192__symphomotion__fb5d1e4b0250.mp4",
+          "videoData": "media/teaser__j294a1192__symphomotion__fb5d1e4b0250.mp4",
+          "posterData": "media/teaser__j294a1192__symphomotion_poster__4ae2c698ac23.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "gardenvase_720_first6s_no_rendering__j62ba9755",
+      "sample": "gardenvase_720_first6s_no_rendering",
+      "instruction": "Move and turn the numbered regions along the highlighted control paths. Follow the camera movement shown in the 3D view.",
+      "inputData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__original__9c832dec0ff6.png",
+      "annotationData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__control_2d__2ac838d27e4c.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/gardenvase_720_first6s_no_rendering__j62ba9755__camera.mp4",
+        "videoData": "media/controls-v2/gardenvase_720_first6s_no_rendering__j62ba9755__camera.mp4",
+        "posterData": "media/controls-v2/gardenvase_720_first6s_no_rendering__j62ba9755__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/gardenvase_720_first6s_no_rendering__j62ba9755__scene.mp4",
+        "videoData": "media/controls-v2/gardenvase_720_first6s_no_rendering__j62ba9755__scene.mp4",
+        "posterData": "media/controls-v2/gardenvase_720_first6s_no_rendering__j62ba9755__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/gardenvase_720_first6s_no_rendering__j62ba9755__ours__61246748d766.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__ours__61246748d766.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__ours_poster__e75aa72d115b.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/gardenvase_720_first6s_no_rendering__j62ba9755__wan_move__833809f2359c.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__wan_move__833809f2359c.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__wan_move_poster__01c023a010ee.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/gardenvase_720_first6s_no_rendering__j62ba9755__ati__a85d3998288a.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__ati__a85d3998288a.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__ati_poster__02573ad78563.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/gardenvase_720_first6s_no_rendering__j62ba9755__gowiththetrack__339e3dcc1133.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__gowiththetrack__339e3dcc1133.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__gowiththetrack_poster__38ea3912e175.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/gardenvase_720_first6s_no_rendering__j62ba9755__versecrafter__e3a1ee18518c.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__versecrafter__e3a1ee18518c.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__versecrafter_poster__615e6ecdadd6.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/gardenvase_720_first6s_no_rendering__j62ba9755__symphomotion__d617306fc129.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__symphomotion__d617306fc129.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__j62ba9755__symphomotion_poster__f91ba66b966f.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "gardenvase_720_first6s_no_rendering__jaa50c602",
+      "sample": "gardenvase_720_first6s_no_rendering",
+      "instruction": "Move and turn the numbered regions along the highlighted control paths. Keep the camera viewpoint fixed.",
+      "inputData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__original__9c832dec0ff6.png",
+      "annotationData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__control_2d__053ee5897425.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/gardenvase_720_first6s_no_rendering__jaa50c602__camera.mp4",
+        "videoData": "media/controls-v2/gardenvase_720_first6s_no_rendering__jaa50c602__camera.mp4",
+        "posterData": "media/controls-v2/gardenvase_720_first6s_no_rendering__jaa50c602__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/gardenvase_720_first6s_no_rendering__jaa50c602__scene.mp4",
+        "videoData": "media/controls-v2/gardenvase_720_first6s_no_rendering__jaa50c602__scene.mp4",
+        "posterData": "media/controls-v2/gardenvase_720_first6s_no_rendering__jaa50c602__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/gardenvase_720_first6s_no_rendering__jaa50c602__ours__cb12f68d0edd.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__ours__cb12f68d0edd.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__ours_poster__93d00055e0fb.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/gardenvase_720_first6s_no_rendering__jaa50c602__wan_move__188dbb23bd30.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__wan_move__188dbb23bd30.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__wan_move_poster__6ae120fccc54.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/gardenvase_720_first6s_no_rendering__jaa50c602__ati__12998ecc923f.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__ati__12998ecc923f.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__ati_poster__20a6856d0336.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/gardenvase_720_first6s_no_rendering__jaa50c602__gowiththetrack__8a173fb39c3b.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__gowiththetrack__8a173fb39c3b.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__gowiththetrack_poster__5141f6fb4a38.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/gardenvase_720_first6s_no_rendering__jaa50c602__versecrafter__0b5ed33849c3.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__versecrafter__0b5ed33849c3.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__versecrafter_poster__31df76955ba0.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/gardenvase_720_first6s_no_rendering__jaa50c602__symphomotion__152fdce93663.mp4",
+          "videoData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__symphomotion__152fdce93663.mp4",
+          "posterData": "media/gardenvase_720_first6s_no_rendering__jaa50c602__symphomotion_poster__f4880901a385.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "dogs-jump__jc15e0a9b",
+      "sample": "dogs-jump",
+      "instruction": "Move the numbered regions along the highlighted control paths. Follow the camera movement shown in the 3D view.",
+      "inputData": "media/dogs-jump__jc15e0a9b__original__0dce6e275e9b.png",
+      "annotationData": "media/dogs-jump__jc15e0a9b__control_2d__4f8e4b8f6a61.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/dogs-jump__jc15e0a9b__camera.mp4",
+        "videoData": "media/controls-v2/dogs-jump__jc15e0a9b__camera.mp4",
+        "posterData": "media/controls-v2/dogs-jump__jc15e0a9b__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/dogs-jump__jc15e0a9b__scene.mp4",
+        "videoData": "media/controls-v2/dogs-jump__jc15e0a9b__scene.mp4",
+        "posterData": "media/controls-v2/dogs-jump__jc15e0a9b__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/dogs-jump__jc15e0a9b__ours__82658ead6814.mp4",
+          "videoData": "media/dogs-jump__jc15e0a9b__ours__82658ead6814.mp4",
+          "posterData": "media/dogs-jump__jc15e0a9b__ours_poster__5d8235ba04ab.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/dogs-jump__jc15e0a9b__wan_move__7b2c4b99ef63.mp4",
+          "videoData": "media/dogs-jump__jc15e0a9b__wan_move__7b2c4b99ef63.mp4",
+          "posterData": "media/dogs-jump__jc15e0a9b__wan_move_poster__ea1283a37cc5.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/dogs-jump__jc15e0a9b__ati__ba520b409fb9.mp4",
+          "videoData": "media/dogs-jump__jc15e0a9b__ati__ba520b409fb9.mp4",
+          "posterData": "media/dogs-jump__jc15e0a9b__ati_poster__1f4f2e94c17d.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/dogs-jump__jc15e0a9b__gowiththetrack__126453e30d2d.mp4",
+          "videoData": "media/dogs-jump__jc15e0a9b__gowiththetrack__126453e30d2d.mp4",
+          "posterData": "media/dogs-jump__jc15e0a9b__gowiththetrack_poster__25d946e8b14b.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/dogs-jump__jc15e0a9b__versecrafter__59996e3a4c5d.mp4",
+          "videoData": "media/dogs-jump__jc15e0a9b__versecrafter__59996e3a4c5d.mp4",
+          "posterData": "media/dogs-jump__jc15e0a9b__versecrafter_poster__474e80839b0b.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/dogs-jump__jc15e0a9b__symphomotion__b6734a8b489d.mp4",
+          "videoData": "media/dogs-jump__jc15e0a9b__symphomotion__b6734a8b489d.mp4",
+          "posterData": "media/dogs-jump__jc15e0a9b__symphomotion_poster__8c3f6cfa557e.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    },
+    {
+      "id": "dogs-jump__jb413bdd9",
+      "sample": "dogs-jump",
+      "instruction": "Move the numbered regions along the highlighted control paths. Keep the camera viewpoint fixed.",
+      "inputData": "media/dogs-jump__jb413bdd9__original__0dce6e275e9b.png",
+      "annotationData": "media/dogs-jump__jb413bdd9__control_2d__b52177a1762d.png",
+      "camera": {
+        "key": "camera",
+        "label": "Camera overview",
+        "video": "media/controls-v2/dogs-jump__jb413bdd9__camera.mp4",
+        "videoData": "media/controls-v2/dogs-jump__jb413bdd9__camera.mp4",
+        "posterData": "media/controls-v2/dogs-jump__jb413bdd9__camera.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "scene": {
+        "key": "scene",
+        "label": "Scene detail",
+        "video": "media/controls-v2/dogs-jump__jb413bdd9__scene.mp4",
+        "videoData": "media/controls-v2/dogs-jump__jb413bdd9__scene.mp4",
+        "posterData": "media/controls-v2/dogs-jump__jb413bdd9__scene.jpg",
+        "size": [
+          1664,
+          960
+        ],
+        "frame_count": 21,
+        "fps": 6,
+        "duration_seconds": 3.5
+      },
+      "models": [
+        {
+          "key": "ours",
+          "label": "Ours",
+          "video": "media/dogs-jump__jb413bdd9__ours__1ebbbc760410.mp4",
+          "videoData": "media/dogs-jump__jb413bdd9__ours__1ebbbc760410.mp4",
+          "posterData": "media/dogs-jump__jb413bdd9__ours_poster__6b486f90ba1c.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 21,
+          "fps": 6,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "wan_move",
+          "label": "Wan-Move",
+          "video": "media/dogs-jump__jb413bdd9__wan_move__79fa227ffdbc.mp4",
+          "videoData": "media/dogs-jump__jb413bdd9__wan_move__79fa227ffdbc.mp4",
+          "posterData": "media/dogs-jump__jb413bdd9__wan_move_poster__ccf1886993ef.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "ati",
+          "label": "ATI",
+          "video": "media/dogs-jump__jb413bdd9__ati__f230f51c4001.mp4",
+          "videoData": "media/dogs-jump__jb413bdd9__ati__f230f51c4001.mp4",
+          "posterData": "media/dogs-jump__jb413bdd9__ati_poster__ac55033f7738.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "gowiththetrack",
+          "label": "Go-with-the-Track",
+          "video": "media/dogs-jump__jb413bdd9__gowiththetrack__0b09b72c92e4.mp4",
+          "videoData": "media/dogs-jump__jb413bdd9__gowiththetrack__0b09b72c92e4.mp4",
+          "posterData": "media/dogs-jump__jb413bdd9__gowiththetrack_poster__b0fe878f5f50.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "versecrafter",
+          "label": "VerseCrafter",
+          "video": "media/dogs-jump__jb413bdd9__versecrafter__f92e7834b37a.mp4",
+          "videoData": "media/dogs-jump__jb413bdd9__versecrafter__f92e7834b37a.mp4",
+          "posterData": "media/dogs-jump__jb413bdd9__versecrafter_poster__d373ec215e84.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        },
+        {
+          "key": "symphomotion",
+          "label": "SymphoMotion",
+          "video": "media/dogs-jump__jb413bdd9__symphomotion__666fe48ea067.mp4",
+          "videoData": "media/dogs-jump__jb413bdd9__symphomotion__666fe48ea067.mp4",
+          "posterData": "media/dogs-jump__jb413bdd9__symphomotion_poster__8c701790506e.jpg",
+          "size": [
+            832,
+            480
+          ],
+          "frame_count": 35,
+          "fps": 10,
+          "duration_seconds": 3.5
+        }
+      ]
+    }
+  ],
+  "loop_duration_seconds": 3.5,
+  "control_display_version": "website-controls-v2"
+}
