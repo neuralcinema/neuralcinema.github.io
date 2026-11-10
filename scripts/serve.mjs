@@ -1,0 +1,7 @@
+import http from 'node:http';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../site');
+const types={'.html':'text/html; charset=utf-8','.mp4':'video/mp4','.jpg':'image/jpeg','.png':'image/png','.pdf':'application/pdf','.svg':'image/svg+xml','.json':'application/json'};
+http.createServer((req,res)=>{if(!['GET','HEAD'].includes(req.method)){res.writeHead(405).end();return;}let f;try{const p=decodeURIComponent(new URL(req.url,'http://localhost').pathname);f=path.resolve(root,'.'+(p.endsWith('/')?p+'index.html':p));if(!f.startsWith(root+path.sep))throw new Error();const s=fs.statSync(f);if(!s.isFile())throw new Error();let start=0,end=s.size-1,status=200;const h={'Content-Type':types[path.extname(f)]||'application/octet-stream','Accept-Ranges':'bytes','Cache-Control':'no-cache'};if(req.headers.range){const m=/^bytes=(\d+)-(\d*)$/.exec(req.headers.range);if(!m)throw new Error();start=+m[1];end=m[2]?Math.min(+m[2],end):end;if(start>end){res.writeHead(416,{'Content-Range':`bytes */${s.size}`}).end();return;}status=206;h['Content-Range']=`bytes ${start}-${end}/${s.size}`;}h['Content-Length']=end-start+1;res.writeHead(status,h);if(req.method==='HEAD')res.end();else fs.createReadStream(f,{start,end}).pipe(res);}catch{res.writeHead(404).end('Not found');}}).listen(Number(process.env.PORT||8780),'127.0.0.1',()=>console.log('Project website ready on port '+(process.env.PORT||8780)));
