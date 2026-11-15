@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;sha256-ggo92DmWSEZqon+xDXjiO71ccFXsvMdD7dqMQ9Zs9Qo=&#x27;; style-src &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27;; connect-src &#x27;none&#x27;; object-src &#x27;none&#x27;; frame-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
+<title>Opposite 3D rotations with similar 2D motion</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f6f8;color:#1d2733;font:15px/1.55 system-ui,sans-serif}
+main{max-width:1500px;margin:auto;padding:28px 20px 60px}h1{font-size:28px;line-height:1.2;margin:4px 0 8px}
+h2{font-size:20px;margin:0 0 10px}.sub{color:#526070;margin:0 0 14px}
+.box{background:#fff;border:1px solid #dde3ea;border-radius:10px;padding:14px 18px;margin:14px 0}
+.box ul{margin:6px 0;padding-left:20px}.card{background:#fff;border:1px solid #dde3ea;border-radius:12px;
+padding:18px;margin:22px 0}
+.scroll{overflow-x:auto}.grid{border-collapse:collapse;width:100%;min-width:900px}
+.grid th{font-size:13px;font-weight:600;padding:4px;text-align:center;vertical-align:bottom}
+.grid td{padding:3px}.grid img{width:100%;height:auto;display:block;border-radius:4px}
+.rowh{writing-mode:vertical-rl;transform:rotate(180deg);width:26px;font-size:14px}.desc{margin:-4px 0 10px;color:#3d4a58}
+
+.legend{display:inline-block;width:160px;height:12px;vertical-align:middle;border-radius:3px;
+background:linear-gradient(90deg,#b2182b,#f7f7f7,#2166ac)}
+</style></head><body><main>
+<h1>Opposite 3D rotations with similar 2D motion: what current XYZ adds</h1>
+<p class="sub">Supplementary material for the response to Reviewer MJ44 (Q3), ICLR 2027 Submission 14595.</p>
+<div class="box">
+<ul>
+<li><b>F<sup>fg</sup></b> (current XYZ) is the foreground guidance map from the paper (Sec. 3), shown as
+RGB = (XYZ + 1) / 2. Gray marks pixels without a foreground handle.</li>
+<li><b>Depth change</b> is each visible point's depth change since frame 0, taken from F<sup>fg</sup>:
+<span class="legend"></span> red = closer, blue = farther (&plusmn;0.4 normalized units). The leading end turns red
+in one direction and blue in the other, although the 2D motion is similar.</li>
+</ul></div>
+
+<section class="card" data-angles='[0, 3, 7, 10, 14, 17, 20, 23, 27, 30, 33, 37, 40, 44, 47, 51, 54, 58, 60, 64, 67]'>
+  <h2>Wooden board example</h2>
+  <p class="desc"><b>Toward</b>: left end turns toward the camera; <b>Away</b>: left end turns away from the camera.</p>
+  <div class="scroll"><table class="grid"><tr><th></th><th>Input first frame</th><th>F<sup>fg</sup>: current XYZ</th><th>Depth change since frame 0</th><th>Generated<br><small>(newer checkpoint)</small></th></tr><tr><th class="rowh">Toward</th><td><a href="frames/board_toward/input.jpg" target="_blank" rel="noopener noreferrer"><img src="frames/board_toward/input.jpg" width="832" height="480" alt="Left end turns toward the camera: input"></a></td><td><a href="frames/board_toward/fg_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/board_toward/fg_" src="frames/board_toward/fg_01.jpg" width="832" height="480" alt="Left end turns toward the camera: fg"></a></td><td><a href="frames/board_toward/dz_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/board_toward/dz_" src="frames/board_toward/dz_01.jpg" width="832" height="480" alt="Left end turns toward the camera: dz"></a></td><td><a href="frames/board_toward/gen_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/board_toward/gen_" src="frames/board_toward/gen_01.jpg" width="832" height="480" alt="Left end turns toward the camera: gen"></a></td></tr><tr><th class="rowh">Away</th><td><a href="frames/board_away/input.jpg" target="_blank" rel="noopener noreferrer"><img src="frames/board_away/input.jpg" width="832" height="480" alt="Left end turns away from the camera: input"></a></td><td><a href="frames/board_away/fg_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/board_away/fg_" src="frames/board_away/fg_01.jpg" width="832" height="480" alt="Left end turns away from the camera: fg"></a></td><td><a href="frames/board_away/dz_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/board_away/dz_" src="frames/board_away/dz_01.jpg" width="832" height="480" alt="Left end turns away from the camera: dz"></a></td><td><a href="frames/board_away/gen_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/board_away/gen_" src="frames/board_away/gen_01.jpg" width="832" height="480" alt="Left end turns away from the camera: gen"></a></td></tr></table></div>
+</section>
+<section class="card" data-angles='[0, 3, 7, 10, 14, 17, 20, 23, 27, 30, 33, 37, 40, 44, 47, 51, 54, 58, 60, 64, 67]'>
+  <h2>Teapot rotation example</h2>
+  <p class="desc"><b>Toward</b>: spout turns toward the camera; <b>Away</b>: spout turns away from the camera.</p>
+  <div class="scroll"><table class="grid"><tr><th></th><th>Input first frame</th><th>F<sup>fg</sup>: current XYZ</th><th>Depth change since frame 0</th><th>Generated<br><small>(newer checkpoint)</small></th></tr><tr><th class="rowh">Toward</th><td><a href="frames/teapot_toward/input.jpg" target="_blank" rel="noopener noreferrer"><img src="frames/teapot_toward/input.jpg" width="832" height="480" alt="Spout turns toward the camera: input"></a></td><td><a href="frames/teapot_toward/fg_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/teapot_toward/fg_" src="frames/teapot_toward/fg_01.jpg" width="832" height="480" alt="Spout turns toward the camera: fg"></a></td><td><a href="frames/teapot_toward/dz_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/teapot_toward/dz_" src="frames/teapot_toward/dz_01.jpg" width="832" height="480" alt="Spout turns toward the camera: dz"></a></td><td><a href="frames/teapot_toward/gen_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/teapot_toward/gen_" src="frames/teapot_toward/gen_01.jpg" width="832" height="480" alt="Spout turns toward the camera: gen"></a></td></tr><tr><th class="rowh">Away</th><td><a href="frames/teapot_away/input.jpg" target="_blank" rel="noopener noreferrer"><img src="frames/teapot_away/input.jpg" width="832" height="480" alt="Spout turns away from the camera: input"></a></td><td><a href="frames/teapot_away/fg_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/teapot_away/fg_" src="frames/teapot_away/fg_01.jpg" width="832" height="480" alt="Spout turns away from the camera: fg"></a></td><td><a href="frames/teapot_away/dz_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/teapot_away/dz_" src="frames/teapot_away/dz_01.jpg" width="832" height="480" alt="Spout turns away from the camera: dz"></a></td><td><a href="frames/teapot_away/gen_01.jpg" target="_blank" rel="noopener noreferrer"><img data-src="frames/teapot_away/gen_" src="frames/teapot_away/gen_01.jpg" width="832" height="480" alt="Spout turns away from the camera: gen"></a></td></tr></table></div>
+</section>
+</main>
+<script>
+document.querySelectorAll('.card').forEach(card => {
+  const imgs = [...card.querySelectorAll('img[data-src]')];
+  imgs.forEach(img => { for (let k = 1; k <= 21; k++) new Image().src = img.dataset.src + String(k).padStart(2, '0') + '.jpg'; });
+  let k = 1;
+  setInterval(() => {
+    k = k % 21 + 1;
+    const s = String(k).padStart(2, '0');
+    imgs.forEach(img => { img.src = img.dataset.src + s + '.jpg'; img.parentElement.href = img.src; });
+  }, 1000 / 3);
+});
+</script></body></html>
